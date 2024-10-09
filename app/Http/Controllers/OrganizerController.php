@@ -19,13 +19,25 @@ class OrganizerController extends Controller
         ]);
 
         $organizer = Organizer::create([
-            'cat_name'=> $newcat['cat_name'],
-            'color' => $newcat['color'],
-            'is_adoptable' => $newcat['is_adoptable'] == "1",
-            'ras_id' => $newcat['ras_id'],
-            'maturity' => $newcat['maturity'],
-            'gender' => $newcat['gender'],
-            'birthday'=> $newcat['birthday'],
+            'name'=> $newOrganizer['name'],
+            'description' => $newOrganizer['description'],
+            'facebook_link' => $newOrganizer['facebook_link'],
+            'x_link' => $newOrganizer['x_link'],
+            'website_link' => $newOrganizer['website_link'],
         ]);
+        return redirect('/organizerList');
+    }
+
+    public function showAllOrganizer(){
+        $organizers = Organizer::all();
+        return view('organizerList', [
+            'organizers' => $organizers
+        ]);
+    }
+
+    public function deleteOrganizer(int $id){
+        $organizer = Organizer::find($id);
+        $organizer->delete();
+        return redirect('/organizerList');
     }
 }

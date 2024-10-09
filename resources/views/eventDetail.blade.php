@@ -49,8 +49,8 @@
         <div class="mt-4">
             <h3 class="text-lg font-semibold">Tags</h3>
             <div class="flex space-x-2">
-                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Surabaya Science & Tech Events</span>
-                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Innovation Challenge</span>
+                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">{{$event->tags}}</span>
+                <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">{{$event->tags}}</span>
             </div>
         </div>
     </div>

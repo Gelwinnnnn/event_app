@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\OrganizerController;
 
 // use App\Http\Controllers\Auth\LoginController;
 // use App\Http\Controllers\ControllerCertification;
@@ -16,3 +17,14 @@ use App\Http\Controllers\EventController;
 Route::get('/', [EventController::class, 'showAllEvent']);
 
 Route::get('/eventDetail/{event_id}', [EventController::class, 'showEventDetail']);
+
+Route::get('/organizerList', [OrganizerController::class, 'showAllOrganizer']);
+
+Route::get('/createOrganizer',function(){
+    return view('createOrganizer'
+);
+});
+
+Route::post('/createOrganizer',  [OrganizerController::class, 'createOrganizer']);
+
+Route::delete('/deleteOrganizer/{organizer_id}', [OrganizerController::class, 'deleteOrganizer']);
