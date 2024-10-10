@@ -20,11 +20,18 @@ class Event extends Model
         'event_category_id'
     ];
 
-    public function organizer(){
+    public function organizer()
+    {
         return $this->belongsTo(organizer::class, 'organizer_id');
     }
 
-    public function event_category(){
-        return $this->belongsTo(event_category::class, 'event_category_id');
+    public function event_category()
+    {
+        return $this->belongsTo(EventCategory::class, 'event_category_id');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 }

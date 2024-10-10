@@ -1,10 +1,10 @@
 @extends('template.template')
 
 @section('layout_content')
-
-<div class="bg-white p-8 rounded shadow-md max-w-lg w-full">
-        <h1 class="text-2xl font-bold mb-6">Organizer</h1>
-        <form action="/createOrganizer" method="POST", enctype="multipart/form-data">
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded shadow-md max-w-lg w-full">
+        <h1 class="text-2xl font-bold mb-6 text-center">Organizer</h1>
+        <form action="/createOrganizer" method="POST" enctype="multipart/form-data">
             @csrf
 
             <!-- Organizer Name -->
@@ -40,10 +40,9 @@
             <!-- Buttons -->
             <div class="flex justify-between">
                 <button type="submit" class="bg-indigo-600 text-white py-2 px-4 rounded shadow hover:bg-indigo-700">Save</button>
-                <a href="/organizerList"
-            class="bg-gray-300 text-black py-2 px-4 rounded shadow hover:bg-gray-400"> Cancel
-        </a>
+                <a href="/organizerList" class="bg-gray-300 text-black py-2 px-4 rounded shadow hover:bg-gray-400">Cancel</a>
             </div>
         </form>
     </div>
-    @endsection
+</div>
+@endsection

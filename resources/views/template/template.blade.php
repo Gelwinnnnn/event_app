@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Event in Surabaya</title>
 </head>
 
 <body class="bg-gray-100">
@@ -18,14 +18,14 @@
                     Master Data
                 </button>
                 <div id="dropdownMenu" class="absolute hidden bg-white shadow-lg mt-2 py-2 w-48 right-0 rounded-lg">
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Master Event Category</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Master Organizer</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Master Event</a>
+                    <a href="/eventCategoryList" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Master Event Category</a>
+                    <a href="/organizerList" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Master Organizer</a>
+                    <a href="/eventList" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Master Event</a>
                 </div>
             </div>
 
             <div>
-                <a href="#" class="text-white text-lg font-semibold hover:text-gray-300">Events</a>
+                <a href="/event" class="text-white text-lg font-semibold hover:text-gray-300">Home</a>
             </div>
         </div>
     </nav>

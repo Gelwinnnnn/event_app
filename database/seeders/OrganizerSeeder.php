@@ -16,7 +16,6 @@ class OrganizerSeeder extends Seeder
         DB::table('organizers')->insert([
             ['name' => 'Organizer 1', 'description' => 'Deskripsi Organizer 1', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Organizer 2', 'description' => 'Deskripsi Organizer 2', 'created_at' => now(), 'updated_at' => now()],
-            // Tambahkan 3 lagi
         ]);
     }
 }
